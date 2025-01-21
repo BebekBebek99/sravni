@@ -1,5 +1,5 @@
-# Используем Playwright 1.49.1 с Ubuntu Jammy
-FROM mcr.microsoft.com/playwright/python:v1.49.1-jammy
+# Используем текущий образ
+FROM mcr.microsoft.com/playwright/python:v1.37.0
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
@@ -9,6 +9,9 @@ COPY . /app
 
 # Устанавливаем зависимости
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Устанавливаем системные зависимости для Playwright
+RUN playwright install-deps
 
 # Устанавливаем Playwright-браузеры
 RUN playwright install
