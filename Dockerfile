@@ -1,5 +1,5 @@
-# Используем официальный образ Playwright
-FROM mcr.microsoft.com/playwright/python:v1.37.0
+# Используем Playwright 1.49.1 с Ubuntu Jammy
+FROM mcr.microsoft.com/playwright/python:v1.49.1-jammy
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
