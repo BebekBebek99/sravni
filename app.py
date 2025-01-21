@@ -9,7 +9,7 @@ app = FastAPI()
 def automate_sms_with_interaction(phone_number):
     with sync_playwright() as p:
         # Запуск браузера
-        browser = p.chromium.launch(headless=True)  # Используем headless режим
+        browser = p.chromium.launch(headless=False)  # Используем headless режим
         context = browser.new_context()
         page = context.new_page()
 
