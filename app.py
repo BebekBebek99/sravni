@@ -36,6 +36,8 @@ def automate_sms_with_interaction(phone_number):
             time.sleep(1)  # Пауза в 1 секунду
             submit_button.click()
 
+
+            time.sleep(1)  # Пауза в 1 секунду
             # Ждем загрузки страницы с вводом кода
             page.wait_for_selector("input[name='code']", timeout=10000)  # Ожидаем поле ввода кода
             print("СМС успешно отправлено! Страница с вводом кода загружена.")
